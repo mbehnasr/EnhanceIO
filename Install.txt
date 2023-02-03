@@ -113,6 +113,7 @@ Loading Modules:
    # modprode enhanceio_rand
    # modprode enhanceio_fifo
    # modprode enhanceio_lru
+   # modprode enhanceio_lifo
    
    Once the modules have been loaded you will be able to use eio_cli to create/modify caches.
    
