@@ -381,7 +381,7 @@ struct flash_cacheblock {
 #define CACHE_REPL_RANDOM       3
 #define CACHE_REPL_LIFO         4
 #define CACHE_REPL_FIRST        CACHE_REPL_FIFO
-#define CACHE_REPL_LAST         CACHE_REPL_RANDOM
+#define CACHE_REPL_LAST         CACHE_REPL_LIFO
 #define CACHE_REPL_DEFAULT      CACHE_REPL_FIFO
 
 struct eio_policy_and_name {
