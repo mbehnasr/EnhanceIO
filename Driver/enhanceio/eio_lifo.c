@@ -74,7 +74,8 @@ int eio_lifo_cache_sets_init(struct eio_policy *p_ops)
 	struct eio_lifo_cache_set *cache_sets;
 
 	pr_info("Initializing lifo cache sets\n");
-	order = (dmc->size >> dmc->consecutive_shift) * sizeof(struct eio_lifo_cache_set);
+	order = (dmc->size >> dmc->consecutive_shift) * 
+		sizeof(struct eio_lifo_cache_set);
 
 	dmc->sp_cache_set = vmalloc((size_t)order);
 	if (dmc->sp_cache_set == NULL)
@@ -93,8 +94,8 @@ int eio_lifo_cache_sets_init(struct eio_policy *p_ops)
 /*
  * The actual function that returns a victim block in index.
  */
-void
-eio_lifo_find_reclaim_dbn(struct eio_policy *p_ops, index_t start_index, index_t *index)
+void eio_lifo_find_reclaim_dbn(struct eio_policy *p_ops, index_t start_index, 
+						 	  	index_t *index)
 {
 	index_t end_index;
 	int slots_searched = 0;
